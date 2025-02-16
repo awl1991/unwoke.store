@@ -4,7 +4,8 @@ export default {
     inlineCss: true,
     useCache: true,
     reactOwnerStack: true,
-    newDevOverlay: true
+    newDevOverlay: true,
+    missingSuspenseWithCSRBailout: false
   },
   images: {
     formats: ['image/avif', 'image/webp'],
