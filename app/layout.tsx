@@ -5,7 +5,7 @@ import { GeistSans } from 'geist/font/sans';
 import { getCart } from 'lib/shopify';
 import { baseUrl } from 'lib/utils';
 import { ReactNode } from 'react';
-import { Toaster } from 'sonner';
+//import { Toaster } from 'sonner';
 import './globals.css';
 
 const { SITE_NAME } = process.env;
@@ -37,7 +37,7 @@ export default async function RootLayout({
           <Navbar />
           <main>
             {children}
-            <Toaster closeButton />
+            {/* <Toaster closeButton /> */}
             {/* <WelcomeToast /> */}
           </main>
         </CartProvider>
