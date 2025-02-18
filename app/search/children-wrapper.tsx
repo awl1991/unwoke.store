@@ -5,5 +5,5 @@ import { Fragment, Suspense } from 'react';
 // Ensure children are re-rendered when the search query changes
 export default function ChildrenWrapper({ children }: { children: React.ReactNode }) {
   const searchParams = useSearchParams();
-return <Suspense><Fragment key={searchParams.get('q')}>{children}</Fragment></Suspense>;
+return <Fragment key={searchParams.get('q')}><Suspense>{children}</Suspense></Fragment>;
 }
