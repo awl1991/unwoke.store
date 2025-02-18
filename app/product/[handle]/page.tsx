@@ -103,7 +103,9 @@ export default async function ProductPage(props: { params: Promise<{ handle: str
             </Suspense>
           </div>
         </div>
+        <Suspense fallback={null}>
         <RelatedProducts id={product.id} />
+       </Suspense>
       </div>
       <Footer />
     </ProductProvider>
