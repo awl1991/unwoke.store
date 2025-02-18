@@ -2,7 +2,6 @@ import Grid from 'components/grid';
 import ProductGridItems from 'components/layout/product-grid-items';
 import { defaultSort, sorting } from 'lib/constants';
 import { getProducts } from 'lib/shopify';
-import { Suspense } from 'react';
 
 export const metadata = {
   title: 'Search',
@@ -21,7 +20,6 @@ export default async function SearchPage(props: {
 
   return (
     <>
-    <Suspense>
       {searchValue ? (
         <p className="mb-4">
           {products.length === 0
@@ -35,7 +33,6 @@ export default async function SearchPage(props: {
           <ProductGridItems products={products} />
         </Grid>
       ) : null}
-      </Suspense>
     </>
   );
 }

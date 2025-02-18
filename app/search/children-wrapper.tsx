@@ -1,9 +1,10 @@
 'use client';
 
 import { useSearchParams } from 'next/navigation';
-import { Fragment, Suspense } from 'react';
+import { Fragment } from 'react';
+
 // Ensure children are re-rendered when the search query changes
 export default function ChildrenWrapper({ children }: { children: React.ReactNode }) {
   const searchParams = useSearchParams();
-return <Suspense><Fragment key={searchParams.get('q')}>{children}</Fragment></Suspense>;
+  return <Fragment key={searchParams.get('q')}>{children}</Fragment>;
 }
